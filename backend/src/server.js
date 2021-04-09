@@ -9,10 +9,10 @@ app.use(express.json());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-const server = app.listen(parseInt(process.env.PORT || 3000, 10));
+const server = app.listen(parseInt(process.env.PORT || 3030, 10));
 
 app.get('/', (req, res) => res.render('frontend', {
-  FRONTEND_ASSET_PATH: 'http://localhost:3001'
+  FRONTEND_ASSET_PATH: process.env.FRONTEND_ASSET_PATH,
 }));
 
 process.on('SIGTERM', () => {
