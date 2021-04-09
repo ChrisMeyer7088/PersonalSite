@@ -1,3 +1,4 @@
 import { render } from 'preact';
+import { Main } from './components/main.jsx';
 
-render(<div><h2>Welcome!</h2></div>, document.body);
+render(<Main />, document.body);

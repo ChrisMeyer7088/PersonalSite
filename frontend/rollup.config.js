@@ -38,6 +38,7 @@ export default {
     }),
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+      preventAssignment: true,
     }),
     process.argv.includes('--watch') &&
       serve({
