@@ -1,4 +1,6 @@
-import { render } from 'preact';
-import { Main } from './components/main.jsx';
+import { render } from 'react-dom';
+import { Main } from './components/main/main.jsx';
 
-render(<Main />, document.body);
+import './styles/global.scss';
+
+render(<Main />, document.getElementById('root'));
