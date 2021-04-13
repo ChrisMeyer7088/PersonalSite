@@ -1,3 +1,2 @@
 # PersonalSite
-
-New Version of my personal website utilizing React.
+Single Page Application built using a React frontend and served with an express backend.
