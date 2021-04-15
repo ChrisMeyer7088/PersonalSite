@@ -1,9 +1,8 @@
-$background-color: #9fa8a3;
-$font-color: #c5d5cb;
+@import './variables.scss';
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: $background-color;
+  background-color: $navy;
   color: $font-color;
   margin: 0px;
   width: 100%;
@@ -14,6 +13,7 @@ body {
 html {
   box-sizing: border-box;
   width: 100%;
+  font-size: $font-xs;
 }
 *, *:before, *:after {
   box-sizing: inherit;
