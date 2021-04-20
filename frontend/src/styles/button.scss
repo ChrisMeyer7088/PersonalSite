@@ -1,0 +1,15 @@
+@mixin orange-button {
+  font-size: $font-xs;
+  color: $orange;
+  border: 1px solid $orange;
+  border-radius: $border-radius;
+  padding: 0.5em;
+  margin-left: .5rem;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    background-color: $orange-opaque;
+    color: white;
+    border-color: $red;
+  }
+}

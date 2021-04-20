@@ -1,0 +1,55 @@
+@import '../../styles/variables.scss';
+@import '../../styles/button.scss';
+
+.aboutContainer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+.aboutHeader {
+  font-size: 22px;
+  color: $font-color-dark;
+  margin: 0;
+  span {
+    color: $red;
+  }
+  div {
+    display: flex;
+    align-self: flex-end;
+    font-size: 44px;
+    color: $light-red;
+  }
+}
+
+.breakLine {
+  border-bottom: 1px solid $light-red;
+  max-height: 1px;
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aboutInfo {
+  max-width: 60%;
+  padding-top: 1.5rem;
+  font-size: $font-sm;
+}
+
+.aboutBtn {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  div {
+    @include orange-button;
+    font-size: $font-md;
+  }
+}
+
+.highlight {
+  color: $orange;
+}
