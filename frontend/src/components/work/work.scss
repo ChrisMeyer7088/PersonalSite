@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+@import '../../styles/component.scss';
+
+.workContainer {
+  @include container;
+}
+
+.workHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  h2 {
+    font-size: $font-lg;
+    color: $light-red;
+    padding: 16px;
+  }
+}
+
+.redDivider {
+  border-bottom: 1px solid $light-red;
+  width: 40%;
+}

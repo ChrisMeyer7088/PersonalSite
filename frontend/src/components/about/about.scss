@@ -1,11 +1,9 @@
 @import '../../styles/variables.scss';
 @import '../../styles/button.scss';
+@import '../../styles/component.scss';
 
 .aboutContainer {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 100%;
+  @include container;
 }
 
 .aboutHeader {
@@ -16,8 +14,6 @@
     color: $red;
   }
   div {
-    display: flex;
-    align-self: flex-end;
     font-size: 44px;
     color: $light-red;
   }
