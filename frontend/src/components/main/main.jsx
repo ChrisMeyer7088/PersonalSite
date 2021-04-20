@@ -8,7 +8,7 @@ export const Main = () => {
     <div className={styles.page}>
       <Header />
       <div class={styles.containerInfo}>
-        <About />
+        <div className={styles.section}><About /></div>
       </div>
     </div>
   );
