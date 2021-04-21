@@ -8,11 +8,11 @@ export const Header = () => {
       <div className={styles.headerItems}>
         <ol className={styles.headerList}>
           <li><a href="/#about">About</a></li>
-          <li><a href="/#experince">Experince</a></li>
           <li><a href="/#work">Work</a></li>
+          <li><a href="/#projects">Projects</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ol>
-        <div className={styles.resume}>Resume</div>
+        <a href="%PUBLIC_URL%'/documents/resume.pdf" download className={styles.resume}>Resume</a>
       </div>
     </header>
   );

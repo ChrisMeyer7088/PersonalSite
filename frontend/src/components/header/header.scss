@@ -1,5 +1,6 @@
 @import '../../styles/variables.scss';
 @import '../../styles/button.scss';
+@import '../../styles/list.scss';
 
 header, .headerItems {
   display: flex;
@@ -15,14 +16,11 @@ header {
   width: 100%;
   height: $header-height;
   padding: 0px 50px;
+  background-color: $dark-red;
 }
 
 .headerList {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
+  @include list;
   li {
     margin: 0px .5rem;
     font-size: $font-xs;
@@ -40,6 +38,7 @@ header {
 
 .resume {
   @include orange-button;
+  text-decoration: none;
 }
 
 .imageBox {
