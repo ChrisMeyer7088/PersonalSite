@@ -1,22 +1,117 @@
 @import '../../styles/variables.scss';
 @import '../../styles/component.scss';
+@import '../../styles/list.scss';
 
 .workContainer {
   @include container;
+  padding-bottom: 25%;
 }
 
 .workHeader {
   display: flex;
   flex-direction: row;
   align-items: center;
+  white-space: nowrap;
   h2 {
+    margin-right: 2rem;
     font-size: $font-lg;
     color: $light-red;
-    padding: 16px;
   }
 }
 
 .redDivider {
   border-bottom: 1px solid $light-red;
-  width: 40%;
+  width: 100%;
+}
+
+.workList {
+  @include list;
+  li.selected {
+    color: $orange;
+    cursor: default;
+    background-color: #6202308c;
+    &:hover {
+      color: $orange;
+    }
+  }
+  li {
+    font-size: $font-sm;
+    padding: .5rem;
+    cursor: pointer;
+    color: $font-color-dark;
+    white-space: nowrap;
+    &:hover {
+      color: $orange-opaque;
+      background-color: #6202308c;
+    }
+  }
+}
+
+.listBorder {
+  border-bottom: 1px solid #6202308c;
+  position: relative;
+  .selected {
+    border-bottom: 2px solid $orange;
+    position: absolute;
+    width: 100%;
+    transition: all 0.35s;
+  }
+  div {
+    width: 0;
+  }
+}
+
+.hide {
+  opacity: 0;
+  transition: all 0.35s;
+}
+
+.visible {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+.itemContainer {
+  position: relative;
+}
+
+.workItem {
+  position: absolute;
+  width: 100%;
+  padding: .5rem;
+}
+
+.position {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
+  
+  .title {
+    font-size: $font-md;
+    color: $light-red;
+    span {
+      color: $orange;
+    }
+  }
+
+  .dateContainer {
+    font-size: $font-sm;
+    font-style: italic;
+    padding-bottom: .5em;
+    white-space: nowrap;
+  }
+  
+  .hyphen {
+    padding: 0 .5rem;
+  }
+}
+
+.bullet {
+  padding-left: 1rem;
+  span {
+    padding-right: 1rem;
+    color: $orange;
+  }
 }

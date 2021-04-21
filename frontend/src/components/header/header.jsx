@@ -12,7 +12,7 @@ export const Header = () => {
           <li><a href="/#projects">Projects</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ol>
-        <div className={styles.resume}>Resume</div>
+        <a href="%PUBLIC_URL%'/documents/resume.pdf" download className={styles.resume}>Resume</a>
       </div>
     </header>
   );
