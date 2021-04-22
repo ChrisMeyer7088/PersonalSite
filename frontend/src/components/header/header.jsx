@@ -1,5 +1,5 @@
 import styles from './header.scss';
-import logo from '../../assets/images/cmLogo.png'
+import logo from '../../assets/images/cmLogo.png';
 
 export const Header = () => {
   return (
@@ -12,7 +12,7 @@ export const Header = () => {
           <li><a href="/#projects">Projects</a></li>
           <li><a href="/#contact">Contact</a></li>
         </ol>
-        <a href="%PUBLIC_URL%'/documents/resume.pdf" download className={styles.resume}>Resume</a>
+        <a href="/resume" className={styles.resume}>Resume</a>
       </div>
     </header>
   );
