@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { Fade } from '../fade/fade.jsx';
 
 import styles from './work.scss';
 
@@ -50,40 +51,42 @@ export const Work = () => {
   const [selectedWork, setSelectedWork] = useState('Applied Medical')
 
   return (
-    <div className={styles.workContainer}>
-      <div className={styles.workHeader}>
-        <h2>Places I've worked</h2>
-        <div className={styles.redDivider}></div>
-      </div>
-      <ol className={styles.workList}>
-        { workList.map(work => {
-          const { title } = work
-          let selected = selectedWork === work.title ? styles.selected : '';
-          return (
-            <div key={title}>
-              <li
-                className={selected}
-                onClick={ () => setSelectedWork(title)}
-                >
-                {title}
-              </li>
-              <div className={styles.listBorder}>
-                <div className={selected}></div>
+    <Fade>
+      <div className={styles.workContainer}>
+        <div className={styles.workHeader}>
+          <h2>Places I've worked</h2>
+          <div className={styles.redDivider}></div>
+        </div>
+        <ol className={styles.workList}>
+          { workList.map(work => {
+            const { title } = work
+            let selected = selectedWork === work.title ? styles.selected : '';
+            return (
+              <div key={title}>
+                <li
+                  className={selected}
+                  onClick={ () => setSelectedWork(title)}
+                  >
+                  {title}
+                </li>
+                <div className={styles.listBorder}>
+                  <div className={selected}></div>
+                </div>
               </div>
-            </div>
-          );
-        }) }
-      </ol>
-      <div className={styles.itemContainer}>
-        { workList.map(work => <WorkItem key={work.title} work={work} selectedWork={selectedWork} />) }
+            );
+          }) }
+        </ol>
+        <div className={styles.itemContainer}>
+          { workList.map(work => <WorkItem key={work.title} work={work} selectedWork={selectedWork} />) }
+        </div>
       </div>
-    </div>
+    </Fade>
   );
 };
 
 const WorkItem = ({ work, selectedWork }) => {
   const { title, startDate, endDate } = work.position
-  const selected = selectedWork === work.title ? styles.visible : styles.hide;
+  const selected = selectedWork === work.title ? styles.visible : '';
   return (
     <div className={`${selected} ${styles.workItem}`}>
       <div className={styles.position}>
