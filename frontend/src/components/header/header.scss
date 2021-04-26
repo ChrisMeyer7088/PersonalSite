@@ -23,7 +23,7 @@ header {
   @include list;
   li {
     margin: 0px .5rem;
-    font-size: $font-xs;
+    font-size: $font-sm;
     &:hover {
       color: $font-color-dark;
     }

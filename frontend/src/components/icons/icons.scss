@@ -1,0 +1,22 @@
+@import '../../styles/variables.scss';
+
+.iconsContainer {
+  position: fixed;
+  bottom: 0;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: calc(#{$icon-size} * 3.5);
+  width: $icon-size;
+}
+
+.icon {
+  height: $icon-size;
+  width: $icon-size;
+}
+
+.line {
+  border-left: 3px solid $orange;
+  height: 100%;
+}
