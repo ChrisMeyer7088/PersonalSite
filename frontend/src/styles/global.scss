@@ -14,7 +14,23 @@ html {
   box-sizing: border-box;
   width: 100%;
   font-size: $font-xs;
+  scroll-behavior: smooth;
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $orange-opaque;
+  &:hover {
+    background: $orange;
+  }
 }
