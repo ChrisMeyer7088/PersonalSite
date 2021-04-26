@@ -9,8 +9,8 @@ export const Main = () => {
     <div className={styles.page}>
       <Header />
       <div className={styles.containerInfo}>
-        <section className={styles.section}><About /></section>
-        <section className={styles.section}><Work /></section>
+        <section id="about" className={styles.section}><About /></section>
+        <section id="work" className={styles.section}><Work /></section>
       </div>
     </div>
   );
