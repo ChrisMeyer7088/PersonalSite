@@ -11,7 +11,6 @@ export const Fade = ({
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       // In your case there's only one element to observe: 
-      console.log(entries)    
       if (entries[0].isIntersecting) {
         // Not possible to set it back to false like this:
         setVisible(true);

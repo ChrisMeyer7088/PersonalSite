@@ -10,13 +10,22 @@ header, .headerItems {
 
 header {
   justify-content: space-between;
-  box-shadow: 0 10px 30px -10px var($navy-shadow);
   z-index: 10;
   position: fixed;
   width: 100%;
   height: $header-height;
   padding: 0px 50px;
   background-color: $dark-red;
+  transition: all 350ms ease-in-out;
+}
+
+.hide {
+  height: 0px;
+  margin-top: -25px;
+}
+
+.shadow {
+  box-shadow: 0 5px 10px -5px rgba($orange-dark, .50);
 }
 
 .headerList {
