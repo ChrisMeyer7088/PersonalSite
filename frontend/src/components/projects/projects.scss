@@ -1,0 +1,47 @@
+@import '../../styles/variables.scss';
+@import '../../styles/component.scss';
+
+.projectsContainer {
+  @include container;
+}
+
+.projectsHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  h2 {
+    margin-right: 2rem;
+    font-size: $font-lg;
+    color: $light-red;
+  }
+}
+
+.redDivider {
+  border-bottom: 1px solid $light-red;
+  width: 100%;
+}
+
+.projects {
+  display: flex;
+}
+
+.projectContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+  width: 25%;
+  margin: 20px;
+  cursor: pointer;
+  &:hover {
+    color: $font-color-dark;
+  }
+}
+
+.projectImg {
+  width: 120px;
+  height: 120px;
+  border-radius: 360px;
+  margin-bottom: 1rem;
+}
