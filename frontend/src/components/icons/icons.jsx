@@ -1,5 +1,5 @@
-import githubIcon from '../../assets/images/githubIcon.png';
-import linkedInIcon from '../../assets/images/linkedInIcon.png';
+import githubIcon from '../../assets/general/githubIcon.png';
+import linkedInIcon from '../../assets/general/linkedInIcon.png';
 
 import styles from './icons.scss';
 

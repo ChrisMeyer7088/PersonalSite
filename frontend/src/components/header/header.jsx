@@ -1,6 +1,6 @@
 import styles from './header.scss';
-import logo from '../../assets/images/cmLogo.png';
-import { useEffect, useRef, useState } from 'react';
+import logo from '../../assets/general/cmLogo.png';
+import { useEffect, useState } from 'react';
 
 export const Header = () => {
   const [enableShadow, setEnableShadow] = useState(false);
@@ -13,8 +13,8 @@ export const Header = () => {
       y ? setEnableShadow(true) : setEnableShadow(false);
       y > lastOffSetY ? setHideHeader(true) : setHideHeader(false);
       setLastOffSetY(y);
-    }
-  })
+    };
+  });
   const shadow = enableShadow ? styles.shadow : ''
   const header = hideHeader ? styles.hide : ''
   return (
@@ -31,13 +31,4 @@ export const Header = () => {
       </div>
     </header>
   );
-};
-
-const handleScroll = (enableShadow, setLast) => {
-  if (window.top.pageYOffset) {
-    enableShadow(true);
-    // console.log(window.top.pageYOffset)
-  } else {
-    enableShadow(false);
-  }
 };
