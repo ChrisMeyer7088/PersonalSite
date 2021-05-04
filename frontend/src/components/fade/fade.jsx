@@ -3,11 +3,10 @@ import { useEffect, useState, useRef } from 'react';
 import styles from './fade.scss';
 
 export const Fade = ({
-  children,
+  children, fadeDelay
 }) => {
   const domRef = useRef();
   const [isVisible, setVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       // In your case there's only one element to observe: 
@@ -25,6 +24,7 @@ export const Fade = ({
     <div
       ref={ domRef }
       className={`${styles.fade} ${isVisible ? styles.visible : ''}`}
+      style={{transitionDuration: fadeDelay }}
     >
       { children }
     </div>
