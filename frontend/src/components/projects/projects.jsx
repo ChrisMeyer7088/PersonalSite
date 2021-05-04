@@ -1,6 +1,6 @@
 import styles from './projects.scss';
 import { Fade } from '../fade/fade.jsx';
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 
 // Pointmap assets
 import pointMapClustering from '../../assets/pointmap/clustering.gif';
@@ -54,7 +54,7 @@ const projects = [
   },
 ];
 export const Projects = () => {
-  const [selectedProject, setSelectedProject] = useState('');
+  const [selectedProject, setSelectedProject] = useState(null);
   return (
     <Fade>
       <div className={styles.projectsContainer}>
@@ -66,26 +66,90 @@ export const Projects = () => {
           { projects.map(project => <ProjectItem project={project} key={project.title} selectProject={setSelectedProject} />) }
         </div>
       </div>
-      { selectedProject && <ProjectModal selectedProject={selectedProject} /> }
+      { selectedProject && <ProjectModal project={selectedProject} selectProject={setSelectedProject} /> }
     </Fade>
   )
 };
 
 const ProjectItem = ({ project, selectProject }) => {
   return (
-    <div className={styles.projectContainer} onClick={ () => selectProject(project.title)}>
+    <div className={styles.projectContainer} onClick={ () => selectProject(project)}>
       <img className={styles.projectImg} src={project.logo} />
       { project.title }
     </div>
   );
 };
 
-const ProjectModal = ({ selectedProject }) => {
-  const project = projects.find(project => {
-    return project.title === selectedProject
-  })
-  console.log(project)
+const ProjectModal = ({ project, selectProject }) => {
+  const modalRef = useRef();
+  const leftArrowRef = useRef();
+  const rightArrowRef = useRef();
+  useOutsideAlerter([modalRef, leftArrowRef, rightArrowRef], selectProject);
+  const maxIndex = getMaxindex(project);
+  const [index, setIndex] = useState(maxIndex);
   return (
-    <div>The Selected project is {project.title}</div>
-  )
+    <div className={styles.projectModal}>
+      <div ref={leftArrowRef} className={styles.modalArrow} onClick={() => {
+          if (index - 1 < 1) {
+            setIndex(maxIndex);
+          } else {
+            setIndex(index - 1);
+          }
+        }}
+      >
+        {'\u276e'}
+      </div>
+      <div ref={modalRef} className={styles.modalContent}>
+        { index === maxIndex && <div className={styles.closeModal} onClick={() => selectProject(null)}>{'\u2717'}</div>}
+        <ModalContent project={project} index={index} maxIndex={maxIndex} />
+      </div>
+      <div ref={rightArrowRef} className={styles.modalArrow} onClick={() => {
+        if (index + 1 > maxIndex) {
+          setIndex(1);
+        } else {
+          setIndex(index + 1)
+        }
+        }}
+      >
+        {'\u276f'}
+      </div>
+    </div>
+  );
 };
+
+const ModalContent = ({ index, project, maxIndex }) => {
+  if (maxIndex === index) {
+    return (
+      <div className={styles.modalInfo}>
+        <h3>{project.title}</h3>
+        <div className={styles.modalDesc}>{project.description}</div>
+      </div>
+    );
+  }
+  return (
+    <img className={styles.modalImg} src={project.imageList[index - 1]} />
+  );
+};
+
+function useOutsideAlerter(refs, selectProject) {
+  useEffect(() => {
+    function handleClickOutside(event) {
+      let found = false
+      refs.forEach(ref => {
+        if (ref.current && ref.current.contains(event.target)) {
+          found = true;
+        }
+      })
+      if (!found) selectProject(null);
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [refs]);
+}
+
+function getMaxindex (project) {
+  return project.imageList ? project.imageList.length + 1 : 1;
+}
