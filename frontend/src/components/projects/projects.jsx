@@ -43,7 +43,14 @@ const projects = [
     title: 'PointMap',
     logo: pointMapLogo,
     imageList: [pointMapClustering, pointMapLogging, pointMapDashboard],
-    description: 'A description of the project here, A description of the project here, A description of the project here',
+    description: <div>
+      <p className={styles.infoP}>PointMap is a geospatial mapping tool that allows users to create points of interest. The project consists of several micorservices including;</p>
+      <ul className={styles.infoList}>
+        <li>A clientside SPA built with tbe Vue framework that utilizes the Google Maps API for the clustering and placement of poitns</li>
+        <li>The authorization and data access server built using .NET Core and is connected to a MYSQL database using the hibernate ORM.</li>
+        <li>A GraphQL logging server that retrieves logs stored in MongoDB to create queries that allow administrators to useful analytics.</li>
+      </ul>
+    </div>,
     githublink: 'https://github.com/CECS-491A/NHT-pointMap',
   },
   {
