@@ -16,15 +16,40 @@ import schedulerLogo from '../../assets/scheduler/logo.webp';
 
 // SpotifyQL assets
 import spotifyqlLogo from '../../assets/spotifyql/logo.png';
+import spotifyqlSchema from '../../assets/spotifyql/schema.gif';
+import spotifyqlQuery from '../../assets/spotifyql/query.gif';
+import spotifyqlMutations from '../../assets/spotifyql/mutations.gif';
 
 // TeslaGames assets
 import teslaGamesLogo from '../../assets/teslaGames/logo.jpg'
 
 const projects = [
   {
+    title: 'PointMap',
+    logo: pointMapLogo,
+    imageList: [pointMapClustering, pointMapLogging, pointMapDashboard],
+    description: <div>
+      <p className={styles.infoP}>PointMap is a geospatial mapping tool that allows users to create points of interest. The project consists of several micorservices including;</p>
+      <ul className={styles.infoList}>
+        <li>A clientside SPA built with tbe Vue framework that utilizes the Google Maps API for the clustering and placement of points.</li>
+        <li>The authorization and data access server built using .NET Core and is connected to a MYSQL database using the hibernate ORM.</li>
+        <li>A GraphQL logging server that retrieves logs stored in MongoDB to create queries that allow administrators to useful analytics.</li>
+      </ul>
+    </div>,
+    githublink: 'https://github.com/CECS-491A/NHT-pointMap',
+  },
+  {
     title: 'SpotifyQL',
     logo: spotifyqlLogo,
-    description: 'A description of the project here, A description of the project here, A description of the project here',
+    imageList: [spotifyqlSchema, spotifyqlMutations, spotifyqlQuery],
+    description: <div>
+      <p className={styles.infoP}>SpotifyQL is a GraphQL intermediary layer for the Spotify API, the application;</p>
+      <ul className={styles.infoList}>
+        <li>Maps all of spotify's objects into a graphql schema.</li>
+        <li>Facilitates Spotify's client credential authorization flow for easy authorization.</li>
+        <li>Provides a complete set of queries and mutations to their respective spotify endpoints.</li>
+      </ul>
+    </div>,
     githublink: 'https://github.com/ChrisMeyer7088/spotifyql',
   },
   {
@@ -38,20 +63,6 @@ const projects = [
     logo: teslaGamesLogo,
     description: 'A description of the project here, A description of the project here, A description of the project here',
     isPrivate: true
-  },
-  {
-    title: 'PointMap',
-    logo: pointMapLogo,
-    imageList: [pointMapClustering, pointMapLogging, pointMapDashboard],
-    description: <div>
-      <p className={styles.infoP}>PointMap is a geospatial mapping tool that allows users to create points of interest. The project consists of several micorservices including;</p>
-      <ul className={styles.infoList}>
-        <li>A clientside SPA built with tbe Vue framework that utilizes the Google Maps API for the clustering and placement of poitns</li>
-        <li>The authorization and data access server built using .NET Core and is connected to a MYSQL database using the hibernate ORM.</li>
-        <li>A GraphQL logging server that retrieves logs stored in MongoDB to create queries that allow administrators to useful analytics.</li>
-      </ul>
-    </div>,
-    githublink: 'https://github.com/CECS-491A/NHT-pointMap',
   },
   {
     title: 'My Scheduler',
