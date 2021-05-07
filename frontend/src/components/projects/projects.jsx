@@ -23,7 +23,9 @@ import spotifyqlQuery from '../../assets/spotifyql/query.gif';
 import spotifyqlMutations from '../../assets/spotifyql/mutations.gif';
 
 // TeslaGames assets
-import teslaGamesLogo from '../../assets/teslaGames/logo.jpg'
+import teslaGamesLogo from '../../assets/teslaGames/logo.jpg';
+import teslaGamesRoom from '../../assets/teslaGames/room.gif';
+import teslaGamesHand from '../../assets/teslaGames/hand.gif';
 
 const projects = [
   {
@@ -57,8 +59,18 @@ const projects = [
   {
     title: 'TeslaGames',
     logo: teslaGamesLogo,
-    description: 'A description of the project here, A description of the project here, A description of the project here',
-    isPrivate: true
+    imageList: [teslaGamesHand, teslaGamesRoom],
+    description: <div>
+      <p className={styles.infoP}>
+        TeslaGames is a web application that handles state management between client and server using websockets. It's structure is a room,
+        client and host paradigm. The main application;
+      </p>
+      <ul className={styles.infoList}>
+        <li>Manages and tracks the room state to ensure the game flows smoothly across all clients.</li>
+        <li>Uses a heartbeat to detect when a client has disconencted or is attempting to reconnect.</li>
+        <li>Determines the allowed actions a client can perform on their selected game.</li>
+      </ul>
+    </div>,
   },
   {
     title: 'DungeonsNDevelopment',
