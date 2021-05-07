@@ -10,6 +10,8 @@ import pointMapLogo from '../../assets/pointmap/Logo.jpg';
 
 // DungeonsNDevelopment assets
 import DNDLogo from '../../assets/dungeonsNdevelopment/logo.jpeg';
+import DNDTextRendering from '../../assets/dungeonsNdevelopment/textRendering.gif';
+import DNDHtmlRendering from '../../assets/dungeonsNdevelopment/htmlRendering.gif';
 
 // My Scheduler assets
 import schedulerLogo from '../../assets/scheduler/logo.webp';
@@ -53,16 +55,27 @@ const projects = [
     githublink: 'https://github.com/ChrisMeyer7088/spotifyql',
   },
   {
-    title: 'DungeonsNDevelopment',
-    logo: DNDLogo,
-    description: 'A description of the project here, A description of the project here, A description of the project here',
-    githublink: 'https://github.com/Dungeons-Development',
-  },
-  {
     title: 'TeslaGames',
     logo: teslaGamesLogo,
     description: 'A description of the project here, A description of the project here, A description of the project here',
     isPrivate: true
+  },
+  {
+    title: 'DungeonsNDevelopment',
+    logo: DNDLogo,
+    description: <div>
+      <p className={styles.infoP}>
+        Dungeons N Development is an organization created for building useful free-to-use web applications for DND. 
+        The project we are currently working on is a letter creator, which works with the following;
+      </p>
+      <ul className={styles.infoList}>
+        <li>Uses TincyMCE to allow the user to easily create and export documents artifacts html.</li>
+        <li>Converts and sanitizes the artifact's HTML then renders it using a shadowDom for encapsulation.</li>
+        <li>Makes use of TinyMCE's plugin import system to allow for customization options.</li>
+      </ul>
+    </div>,
+    imageList: [DNDTextRendering, DNDHtmlRendering],
+    githublink: 'https://github.com/Dungeons-Development',
   },
   {
     title: 'My Scheduler',
