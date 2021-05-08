@@ -93,7 +93,7 @@ export const Projects = () => {
     <Fade>
       <div className={styles.projectsContainer}>
         <div className={styles.projectsHeader}>
-          <h2>Projects I've done</h2>
+          <h2>A few projects I've done</h2>
           <div className={styles.redDivider}></div>
         </div>
         <div className={styles.projects}>
