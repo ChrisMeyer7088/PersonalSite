@@ -2,6 +2,10 @@
 @import '../../styles/button.scss';
 @import '../../styles/component.scss';
 
+.aboutBtn {
+  @include about-button;
+}
+
 .aboutContainer {
   @include container;
 }
@@ -34,16 +38,6 @@
   max-width: 60%;
   padding-top: 1.5rem;
   font-size: $font-sm;
-}
-
-.aboutBtn {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  div {
-    @include orange-button;
-    font-size: $font-md;
-  }
 }
 
 .highlight {

@@ -15,7 +15,7 @@ export const About = () => {
             <span className={styles.highlight}> Applied Medical</span> building out innovative solutions for a learning management system.
           </div>
           <div className={styles.aboutBtn}>
-            <div>Contact</div>
+            <a href="mailto:chrismeyer175@gmail.com?subject=Saying%20Hello!">Say Hello</a>
           </div>
         </div>
       </div>

@@ -5,12 +5,16 @@
 }
 
 .section {
-  min-height: 100vh;
+  min-height: 75vh;
   max-width: 850px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.sectionHeight {
+  min-height: 100vh;
 }
 
 .containerInfo {
