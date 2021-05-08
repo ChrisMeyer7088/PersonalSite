@@ -19,7 +19,7 @@ export const Header = () => {
   const header = hideHeader ? styles.hide : ''
   return (
     <header className={`${shadow} ${header}`}>
-      <a className={styles.imageBox}><img src={logo} /></a>
+      <a href="/#about" className={styles.imageBox}><img src={logo} /></a>
       <div className={styles.headerItems}>
         <ol className={styles.headerList}>
           <li><a href="/#about">About</a></li>
