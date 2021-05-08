@@ -2,8 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const fs = require('fs');
+const favicon = require('serve-favicon');
 
 const app = express();
+app.use(favicon(path.join(__dirname,'assets','favicon.ico')));
 app.use(morgan(':method :url :status :response-time ms'));
 app.use(express.json());
 
@@ -17,8 +19,7 @@ app.get('/', (req, res) => res.render('frontend', {
 }));
 
 app.get('/resume', (req, res) => {
-  const fileDir = `${__dirname}/assets/resume.pdf`
-  res.download(fileDir)
+  res.download(path.join(__dirname,'assets','resume.pdf'))
 })
 
 process.on('SIGTERM', () => {
