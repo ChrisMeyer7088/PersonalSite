@@ -1,5 +1,6 @@
 import githubIcon from '../../assets/general/githubIcon.png';
 import linkedInIcon from '../../assets/general/linkedInIcon.png';
+import facebookIcon from '../../assets/general/facebookIcon.png';
 
 import styles from './icons.scss';
 

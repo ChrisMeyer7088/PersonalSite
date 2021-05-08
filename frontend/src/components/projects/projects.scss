@@ -53,10 +53,11 @@
 
 .projectModal {
   position: fixed;
-  z-index: 5;
+  z-index: 6;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 100%;
   width: 100%;
   padding: 0 5%;
   left: 50%;
@@ -65,7 +66,7 @@
 }
 
 .modalArrow {
-  font-size: 40px;
+  font-size: 30px;
   height: 70px;
   width: 70px;
   display: flex;
@@ -138,4 +139,17 @@
 .infoList {
   margin: 0;
   font-size: $font-sm;
+}
+
+.fade {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .4s ease-out;
+  will-change: opacity, visibility;
+}
+
+.visible {
+  opacity: 1 !important;
+  visibility: visible !important;
+  width: 100% !important;
 }

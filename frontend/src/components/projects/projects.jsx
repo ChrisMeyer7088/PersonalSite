@@ -89,6 +89,7 @@ const projects = [
 ];
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const projectClass = `${styles.fade} ${selectedProject ? styles.visible : ''}`
   return (
     <Fade>
       <div className={styles.projectsContainer}>
@@ -100,7 +101,9 @@ export const Projects = () => {
           { projects.map(project => <ProjectItem project={project} key={project.title} selectProject={setSelectedProject} />) }
         </div>
       </div>
-      { selectedProject && <ProjectModal project={selectedProject} selectProject={setSelectedProject} /> }
+      <div className={projectClass}>
+        { selectedProject && <ProjectModal project={selectedProject} selectProject={setSelectedProject} /> }
+      </div>
     </Fade>
   )
 };
@@ -115,12 +118,14 @@ const ProjectItem = ({ project, selectProject }) => {
 };
 
 const ProjectModal = ({ project, selectProject }) => {
+  useEffect(() => console.log('made it here'))
   const modalRef = useRef();
   const leftArrowRef = useRef();
   const rightArrowRef = useRef();
   useOutsideAlerter([modalRef, leftArrowRef, rightArrowRef], selectProject);
   const maxIndex = getMaxindex(project);
   const [index, setIndex] = useState(maxIndex);
+
   return (
     <div className={styles.projectModal}>
       <div ref={leftArrowRef} className={styles.modalArrow} onClick={() => {
