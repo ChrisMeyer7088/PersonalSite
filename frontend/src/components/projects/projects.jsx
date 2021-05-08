@@ -13,9 +13,6 @@ import DNDLogo from '../../assets/dungeonsNdevelopment/logo.jpeg';
 import DNDTextRendering from '../../assets/dungeonsNdevelopment/textRendering.gif';
 import DNDHtmlRendering from '../../assets/dungeonsNdevelopment/htmlRendering.gif';
 
-// My Scheduler assets
-import schedulerLogo from '../../assets/scheduler/logo.webp';
-
 // SpotifyQL assets
 import spotifyqlLogo from '../../assets/spotifyql/logo.png';
 import spotifyqlSchema from '../../assets/spotifyql/schema.gif';
@@ -59,7 +56,7 @@ const projects = [
   {
     title: 'TeslaGames',
     logo: teslaGamesLogo,
-    imageList: [teslaGamesHand, teslaGamesRoom],
+    imageList: [teslaGamesRoom, teslaGamesHand],
     description: <div>
       <p className={styles.infoP}>
         TeslaGames is a web application that handles state management between client and server using websockets. It's structure is a room,
@@ -75,6 +72,7 @@ const projects = [
   {
     title: 'DungeonsNDevelopment',
     logo: DNDLogo,
+    imageList: [DNDTextRendering, DNDHtmlRendering],
     description: <div>
       <p className={styles.infoP}>
         Dungeons N Development is an organization created for building useful free-to-use web applications for DND. 
@@ -86,14 +84,7 @@ const projects = [
         <li>Makes use of TinyMCE's plugin import system to allow for customization options.</li>
       </ul>
     </div>,
-    imageList: [DNDTextRendering, DNDHtmlRendering],
     githublink: 'https://github.com/Dungeons-Development',
-  },
-  {
-    title: 'My Scheduler',
-    logo: schedulerLogo,
-    description: 'A description of the project here, A description of the project here, A description of the project here',
-    githublink: 'https://github.com/ChrisMeyer7088/My-Scheduler',
   },
 ];
 export const Projects = () => {
