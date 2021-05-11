@@ -1,9 +1,5 @@
 @import '../../styles/variables.scss';
 
-.page {
-  box-sizing: inherit;
-}
-
 .section {
   min-height: 100vh;
   height: 100%;
@@ -13,6 +9,7 @@
   &:last-child {
     min-height: 80vh;
     height: auto;
+    z-index: 1;
   }
 }
 

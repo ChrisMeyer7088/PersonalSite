@@ -143,6 +143,7 @@
   background-color: $red;
   padding: 1rem;
   color: $orange;
+  overflow: auto;
   h3 {
     margin-top: 8%;
     margin-bottom: 4%;
@@ -180,6 +181,7 @@
   height: 100%;
   width: 100%;
   background-color: $dark-red;
+  overflow: auto;
 }
 
 .mobileContainer {
