@@ -2,10 +2,20 @@
 @import '../../styles/button.scss';
 @import '../../styles/list.scss';
 
+$ham-menu-width: 250px;
+
 header, .headerItems {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.headerItems {
+  @media(max-width: $mobile-width) {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
 }
 
 header {
@@ -14,9 +24,12 @@ header {
   position: fixed;
   width: 100%;
   height: $header-height;
-  padding: 0px 50px;
   background-color: $dark-red;
   transition: all 350ms ease-in-out;
+  padding: 0 50px;
+  @media (max-width: $mobile-width) {
+    padding: 0 2rem;
+  }
 }
 
 .hide {
@@ -25,7 +38,7 @@ header {
 }
 
 .shadow {
-  box-shadow: 0 5px 10px -5px rgba($orange-dark, .50);
+  box-shadow: rgba($orange-dark, .50) 0px 5px 15px;
 }
 
 .headerList {
@@ -43,6 +56,14 @@ header {
     color: inherit;
     cursor: pointer;
   }
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    font-size: $font-md;
+    li {
+      padding: 3px 20px 20px;
+    }
+  }
 }
 
 .resume {
@@ -58,4 +79,56 @@ header {
     height: 100%;
     width: 100%;
   }
+}
+
+.hamBtn {
+  width: 50px;
+  height: 50px;
+}
+
+.hamMenu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  top: 0;
+  right: 0;
+  height: calc(100vh + 25px);
+  width: $ham-menu-width;
+  z-index: 5;
+  background-color: $dark-red;
+  box-shadow: rgba($orange-dark, .50) 0px 5px 15px;
+  padding: 50px 10px;
+}
+
+.hide {
+  visibility: hidden;
+  transition: all .35s ease-out;
+  margin-right: calc(-1 * #{$ham-menu-width})
+}
+
+.show {
+  visibility: visible !important;
+  margin-right: 0px !important;
+}
+
+.closeIcon {
+  display: flex;
+  justify-content: center;
+  margin-left: 80%;
+  font-size: 38px;
+  color: $orange;
+  cursor: pointer;
+}
+
+.hamIcons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
 }
