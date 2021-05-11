@@ -87,12 +87,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  padding: .5rem;
+  margin: .5rem;
+
   border-radius: 360px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  background-color: $red;
   &:hover {
-    background-color: #47002385;
     color: $font-color-dark;
   }
 }
@@ -121,6 +120,11 @@
   justify-content: center;
   &:hover {
     background-color: #470023;
+  }
+  @media(max-width: $mobile-width) {
+    height: 50px;
+    width: 50px;
+    font-size: 35px;
   }
 }
 
@@ -166,4 +170,28 @@
   opacity: 1 !important;
   visibility: visible !important;
   width: 100% !important;
+}
+
+.mobileModal {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: $dark-red;
+}
+
+.mobileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15% 2rem 2rem;
+}
+
+.gitIcon {
+  margin-left: .5rem;
+  height: 16px;
+  width: 16px;
 }
