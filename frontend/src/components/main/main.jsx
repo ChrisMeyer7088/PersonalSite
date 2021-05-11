@@ -20,7 +20,7 @@ export const Main = () => {
       <div className={styles.containerInfo}>
         <section id="about" className={`${styles.section} ${styles.sectionHeight}`}><About /></section>
         <section id="work" className={styles.section}><Work isMobile={isMobile} /></section>
-        <section id="projects" className={styles.section}><Projects /></section>
+        <section id="projects" className={styles.section}><Projects isMobile={isMobile} /></section>
         <section id="contact" className={styles.section}><Contact /></section>
       </div>
       { !isMobile && <Icons />}

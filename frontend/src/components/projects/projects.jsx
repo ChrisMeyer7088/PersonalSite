@@ -1,6 +1,7 @@
 import styles from './projects.scss';
 import { Fade } from '../fade/fade.jsx';
 import { useRef, useState, useEffect } from 'react';
+import githubIcon from '../../assets/general/githubIcon.png';
 
 // Pointmap assets
 import pointMapClustering from '../../assets/pointmap/clustering.gif';
@@ -87,9 +88,13 @@ const projects = [
     githublink: 'https://github.com/Dungeons-Development',
   },
 ];
-export const Projects = () => {
+
+export const Projects = ({ isMobile }) => {
   const [selectedProject, setSelectedProject] = useState(null);
   const projectClass = `${styles.fade} ${selectedProject ? styles.visible : ''}`
+  const projectModalEle = isMobile ? <ProjectModalMobile project={selectedProject} selectProject={setSelectedProject} /> :
+    <ProjectModal project={selectedProject} selectProject={setSelectedProject} />
+
   return (
     <Fade>
       <div className={styles.projectsContainer}>
@@ -102,7 +107,7 @@ export const Projects = () => {
         </div>
       </div>
       <div className={projectClass}>
-        { selectedProject && <ProjectModal project={selectedProject} selectProject={setSelectedProject} /> }
+        { selectedProject && projectModalEle }
       </div>
     </Fade>
   )
@@ -118,7 +123,6 @@ const ProjectItem = ({ project, selectProject }) => {
 };
 
 const ProjectModal = ({ project, selectProject }) => {
-  useEffect(() => console.log('made it here'))
   const modalRef = useRef();
   const leftArrowRef = useRef();
   const rightArrowRef = useRef();
@@ -160,7 +164,10 @@ const ModalContent = ({ index, project, maxIndex }) => {
   if (maxIndex === index) {
     return (
       <div className={styles.modalInfo}>
-        <h3>{project.title}</h3>
+        <h3>
+          {project.title}
+          { project.githublink && <a href={`${project.githublink}`} target="_blank"><img className={styles.gitIcon} src={githubIcon} /></a>}
+        </h3>
         <div className={styles.modalDesc}>{project.description}</div>
       </div>
     );
@@ -169,6 +176,21 @@ const ModalContent = ({ index, project, maxIndex }) => {
     <img className={styles.modalImg} src={project.imageList[index - 1]} />
   );
 };
+
+const ProjectModalMobile = ({ project, selectProject={selectProject} }) => {
+  return (
+    <div className={styles.mobileModal}>
+      <div className={styles.closeModal} onClick={() => selectProject(null)}>{'\u2717'}</div>
+      <div className={styles.mobileContainer}>
+        <h3>
+          {project.title}
+          { project.githublink && <a href={`${project.githublink}`} target="_blank"><img className={styles.gitIcon} src={githubIcon} /></a>}
+        </h3>
+        <div className={styles.modalDesc}>{project.description}</div>
+      </div>
+    </div>
+  );
+}
 
 function useOutsideAlerter(refs, selectProject) {
   useEffect(() => {
