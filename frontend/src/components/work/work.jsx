@@ -4,7 +4,7 @@ import { Fade } from '../fade/fade.jsx';
 import styles from './work.scss';
 
 export const Work = ({isMobile}) => {
-  [workList, setWorkList] = useState([
+  const [workList, setWorkList] = useState([
     {
       title: 'Applied Medical',
       position: {

@@ -11,4 +11,4 @@ COPY rollup.config.js rollup.config.js
 
 CMD npm run watch
 
-EXPOSE 3001
+EXPOSE 8080
