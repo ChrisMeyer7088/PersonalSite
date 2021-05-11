@@ -32,12 +32,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .aboutInfo {
   max-width: 60%;
   padding-top: 1.5rem;
   font-size: $font-sm;
+  @media (max-width: $mobile-width) {
+    padding-bottom: 2rem;
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 .highlight {

@@ -16,6 +16,9 @@
     margin-right: 2rem;
     font-size: $font-lg;
     color: $light-red;
+    @media (max-width: $mobile-width) {
+      font-size: $font-md;
+    }
   }
 }
 
@@ -43,6 +46,9 @@
     &:hover {
       color: $orange-opaque;
       background-color: #6202308c;
+    }
+    @media (max-width: $mobile-width) {
+      font-size: $font-xxs;
     }
   }
 }
@@ -85,11 +91,12 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  white-space: nowrap;
-  
   .title {
     font-size: $font-md;
     color: $light-red;
+    @media (max-width: $mobile-width) {
+      font-size: $font-sm;
+    }
     span {
       color: $orange;
     }
@@ -108,7 +115,8 @@
 }
 
 .bullet {
-  padding-left: 1rem;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
   span {
     padding-right: 1rem;
     color: $orange;
