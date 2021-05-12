@@ -6,6 +6,10 @@
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  @media (max-width: $mobile-width) {
+    align-items: flex-start;
+  }
   &:last-child {
     min-height: 80vh;
     height: auto;
@@ -15,16 +19,12 @@
 
 .sectionHeight {
   min-height: calc(100vh - (2 * #{$header-height}));
-  @media (max-width: $mobile-width) {
-    align-items: flex-start;
-  }
 }
 
 .containerInfo {
   max-width: 1250px;
   margin: auto;
-  padding: calc(2 * #{$header-height}) 150px 0;
-
+  padding: 0 150px 0;
   @media (max-width: $tablet-width) {
     padding: calc(2 * #{$header-height}) 80px 0;
   }
