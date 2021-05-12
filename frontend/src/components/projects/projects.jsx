@@ -12,11 +12,11 @@ const projects = [
       'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/PointMap/logging.gif',
       'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/PointMap/adminDashboard.gif'],
     description: <div>
-      <p className={styles.infoP}>PointMap is a geospatial mapping tool that allows users to create points of interest. The project consists of several micorservices including;</p>
+      <p className={styles.infoP}>PointMap is a geospatial mapping tool that allows users to create points of interest. The project consists of several micorservices including:</p>
       <ul className={styles.infoList}>
-        <li>A clientside SPA built with tbe Vue framework that utilizes the Google Maps API for the clustering and placement of points.</li>
+        <li>A clientside SPA built with the Vue framework that utilizes the Google Maps API for the clustering and placement of points.</li>
         <li>The authorization and data access server built using .NET Core and is connected to a MYSQL database using the hibernate ORM.</li>
-        <li>A GraphQL logging server that retrieves logs stored in MongoDB to create queries that allow administrators to useful analytics.</li>
+        <li>A GraphQL logging server that retrieves logs stored in MongoDB to create queries that allow administrators to view useful analytics.</li>
       </ul>
     </div>,
     githublink: 'https://github.com/CECS-491A/NHT-pointMap',
@@ -28,11 +28,11 @@ const projects = [
       'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/SpotifyQL/mutations.gif',
       'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/SpotifyQL/query.gif'],
     description: <div>
-      <p className={styles.infoP}>SpotifyQL is a GraphQL intermediary layer for the Spotify API, the application;</p>
+      <p className={styles.infoP}>SpotifyQL is a GraphQL intermediary layer for the Spotify API, the application features:</p>
       <ul className={styles.infoList}>
-        <li>Maps all of spotify's objects into a graphql schema.</li>
+        <li>Maps all of Spotify's objects into a graphql schema.</li>
         <li>Facilitates Spotify's client credential authorization flow for easy authorization.</li>
-        <li>Provides a complete set of queries and mutations to their respective spotify endpoints.</li>
+        <li>Provides a complete set of queries and mutations to their respective Spotify endpoints.</li>
       </ul>
     </div>,
     githublink: 'https://github.com/ChrisMeyer7088/spotifyql',
@@ -44,12 +44,12 @@ const projects = [
       'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/Teslagames/hand.gif'],
     description: <div>
       <p className={styles.infoP}>
-        TeslaGames is a web application that handles state management between client and server using websockets. It's structure is a room,
-        client and host paradigm. The main application;
+        TeslaGames is a web application that handles state management between client and server using websockets. Its structure is a room,
+        client and host paradigm. The main application:
       </p>
       <ul className={styles.infoList}>
         <li>Manages and tracks the room state to ensure the game flows smoothly across all clients.</li>
-        <li>Uses a heartbeat to detect when a client has disconencted or is attempting to reconnect.</li>
+        <li>Uses a heartbeat to detect when a client has disconnected or is attempting to reconnect.</li>
         <li>Determines the allowed actions a client can perform on their selected game.</li>
       </ul>
     </div>,
@@ -62,10 +62,10 @@ const projects = [
     description: <div>
       <p className={styles.infoP}>
         Dungeons N Development is an organization created for building useful free-to-use web applications for DND. 
-        The project we are currently working on is a letter creator, which works with the following;
+        The project we are currently working on is a letter creator, which performs the following:
       </p>
       <ul className={styles.infoList}>
-        <li>Uses TincyMCE to allow the user to easily create and export documents artifacts html.</li>
+        <li>Uses TinyMCE to allow the user to easily create and export letters to html.</li>
         <li>Converts and sanitizes the artifact's HTML then renders it using a shadowDom for encapsulation.</li>
         <li>Makes use of TinyMCE's plugin import system to allow for customization options.</li>
       </ul>
