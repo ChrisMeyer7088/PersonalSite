@@ -13,7 +13,7 @@ export const Work = ({isMobile}) => {
           endDate: 'Present',
       },
       bullets: [
-        'Advise and coordinate with multiple teams in handling user requirements',
+        'Advised and coordinated with multiple teams in handling user requirements',
         'Worked with UI/UX team in designing and creating robust custom features',
         'Implemented project CI/CD pipeline utilizing Gitlab runners',
         'Setup database versioning control tool Flyway for SQL migration scripts',
@@ -25,13 +25,13 @@ export const Work = ({isMobile}) => {
       position: {
           title: 'Cyber Engineering Intern',
           startDate: 'May 2019',
-          endDate: 'June 2019',
+          endDate: 'August 2019',
       },
       bullets: [
         'Created Bash shell scripts for automatically hardening RedHat and Windows 10 operating systems',
-        'Designed procedures and scripts for vetting systems for vulnerabilities with Nessus',
-        'Performed resource and budgeting for a new pen testing lab',
-        'Documented action plans for handling discovered system vulnerabilities',
+        'Designed procedures and scripts to vet systems for vulnerabilities with Nessus',
+        'Performed resource and budgeting for a new penetration testing lab',
+        'Documented action plans for handling new system vulnerabilities',
       ],
     },
     {
@@ -39,11 +39,11 @@ export const Work = ({isMobile}) => {
       position: {
           title: 'Engineering Intern',
           startDate: 'May 2018',
-          endDate: 'June 2018',
+          endDate: 'August 2018',
       },
       bullets: [
         'Developed program in VBA that automated time-consuming calculations for a conduit schedule',
-        'Assisted in creating a Supervisory Control and Data Acquisition software package for a water treatment plant using Ignition',
+        'Assisted in creating a SCADA software package for a water treatment plant using Ignition',
         'Created program for auto importing and formating AutoCAD data with excel',
       ],
     }
