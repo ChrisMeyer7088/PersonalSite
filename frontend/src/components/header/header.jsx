@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import HamMenu from '../../assets/general/hamMenu.png';
-import logo from '../../assets/general/cmLogo.png';
-import githubIcon from '../../assets/general/githubIcon.png';
-import linkedInIcon from '../../assets/general/linkedInIcon.png';
+const HamMenu = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/hamMenu.png';
+const logo = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/cmLogo.png';
+const githubIcon = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/githubIcon.png';
+const linkedInIcon = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/linkedInIcon.png';
 
 import styles from './header.scss';
 

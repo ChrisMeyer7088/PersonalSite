@@ -1,5 +1,5 @@
-import githubIcon from '../../assets/general/githubIcon.png';
-import linkedInIcon from '../../assets/general/linkedInIcon.png';
+const githubIcon = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/githubIcon.png';
+const linkedInIcon = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/linkedInIcon.png';
 
 import styles from './icons.scss';
 
