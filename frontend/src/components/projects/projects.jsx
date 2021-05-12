@@ -1,35 +1,16 @@
 import styles from './projects.scss';
 import { Fade } from '../fade/fade.jsx';
 import { useRef, useState, useEffect } from 'react';
-import githubIcon from '../../assets/general/githubIcon.png';
 
-// Pointmap assets
-import pointMapClustering from '../../assets/pointmap/clustering.gif';
-import pointMapDashboard from '../../assets/pointmap/adminDashboard.gif';
-import pointMapLogging from '../../assets/pointmap/logging.gif';
-import pointMapLogo from '../../assets/pointmap/Logo.jpg';
-
-// DungeonsNDevelopment assets
-import DNDLogo from '../../assets/dungeonsNdevelopment/logo.jpeg';
-import DNDTextRendering from '../../assets/dungeonsNdevelopment/textRendering.gif';
-import DNDHtmlRendering from '../../assets/dungeonsNdevelopment/htmlRendering.gif';
-
-// SpotifyQL assets
-import spotifyqlLogo from '../../assets/spotifyql/logo.png';
-import spotifyqlSchema from '../../assets/spotifyql/schema.gif';
-import spotifyqlQuery from '../../assets/spotifyql/query.gif';
-import spotifyqlMutations from '../../assets/spotifyql/mutations.gif';
-
-// TeslaGames assets
-import teslaGamesLogo from '../../assets/teslaGames/logo.jpg';
-import teslaGamesRoom from '../../assets/teslaGames/room.gif';
-import teslaGamesHand from '../../assets/teslaGames/hand.gif';
+const githubIcon = 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/General/githubIcon.png';
 
 const projects = [
   {
     title: 'PointMap',
-    logo: pointMapLogo,
-    imageList: [pointMapClustering, pointMapLogging, pointMapDashboard],
+    logo: 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/PointMap/Logo.jpg',
+    imageList: ['https://professional.sfo3.digitaloceanspaces.com/PersonalSite/PointMap/clustering.gif',
+      'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/PointMap/logging.gif',
+      'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/PointMap/adminDashboard.gif'],
     description: <div>
       <p className={styles.infoP}>PointMap is a geospatial mapping tool that allows users to create points of interest. The project consists of several micorservices including;</p>
       <ul className={styles.infoList}>
@@ -42,8 +23,10 @@ const projects = [
   },
   {
     title: 'SpotifyQL',
-    logo: spotifyqlLogo,
-    imageList: [spotifyqlSchema, spotifyqlMutations, spotifyqlQuery],
+    logo: 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/SpotifyQL/logo.png',
+    imageList: ['https://professional.sfo3.digitaloceanspaces.com/PersonalSite/SpotifyQL/schema.gif',
+      'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/SpotifyQL/mutations.gif',
+      'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/SpotifyQL/query.gif'],
     description: <div>
       <p className={styles.infoP}>SpotifyQL is a GraphQL intermediary layer for the Spotify API, the application;</p>
       <ul className={styles.infoList}>
@@ -56,8 +39,9 @@ const projects = [
   },
   {
     title: 'TeslaGames',
-    logo: teslaGamesLogo,
-    imageList: [teslaGamesRoom, teslaGamesHand],
+    logo: 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/Teslagames/logo.jpg',
+    imageList: ['https://professional.sfo3.digitaloceanspaces.com/PersonalSite/Teslagames/room.gif',
+      'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/Teslagames/hand.gif'],
     description: <div>
       <p className={styles.infoP}>
         TeslaGames is a web application that handles state management between client and server using websockets. It's structure is a room,
@@ -72,8 +56,9 @@ const projects = [
   },
   {
     title: 'DungeonsNDevelopment',
-    logo: DNDLogo,
-    imageList: [DNDTextRendering, DNDHtmlRendering],
+    logo: 'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/DungeonsNDevelopment/logo.jpeg',
+    imageList: ['https://professional.sfo3.digitaloceanspaces.com/PersonalSite/DungeonsNDevelopment/textRendering.gif',
+      'https://professional.sfo3.digitaloceanspaces.com/PersonalSite/DungeonsNDevelopment/htmlRendering.gif'],
     description: <div>
       <p className={styles.infoP}>
         Dungeons N Development is an organization created for building useful free-to-use web applications for DND. 
