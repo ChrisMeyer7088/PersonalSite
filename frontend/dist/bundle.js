@@ -9681,7 +9681,7 @@ const HeaderList = () => {
         })
       })]
     }), /*#__PURE__*/jsxRuntime.exports.jsx("a", {
-      href: "/resume",
+      href: "/assets/resume.pdf",
       className: styles$7.resume,
       children: "Resume"
     })]
