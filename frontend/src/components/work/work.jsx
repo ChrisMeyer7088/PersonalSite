@@ -6,11 +6,26 @@ import styles from './work.scss';
 export const Work = ({isMobile}) => {
   const [workList, setWorkList] = useState([
     {
+      title: '2U',
+      position: {
+        title: 'Software Engineer',
+        startDate: 'August 2021',
+        endDate: 'Present',
+      },
+      bullets: [
+        'Developed real-time drawing tools for documents, videos, and sound files in React and Express',
+        'Facilitated deployments to staging, QA and production using Jenkins and Kubernetes',
+        'Worked alongside BAs to ensure developed features met business standards in a timely fashion',
+        'Used Datadog to track down and help identify the source of production incidents',
+        'Mentored, code reviewed, and paired with junior team members',
+      ],
+    },
+    {
       title: 'Applied Medical',
       position: {
           title: 'Software Engineer',
           startDate: 'November 2019',
-          endDate: 'Present',
+          endDate: 'August 2021',
       },
       bullets: [
         'Advised and coordinated with multiple teams in handling user requirements',

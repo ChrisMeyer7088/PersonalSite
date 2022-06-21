@@ -24,7 +24,7 @@ header {
   position: fixed;
   width: 100%;
   height: $header-height;
-  background-color: $dark-red;
+  background-color: $header-color;
   transition: all 350ms ease-in-out;
   padding: 0 50px;
   @media (max-width: $mobile-width) {
@@ -38,7 +38,7 @@ header {
 }
 
 .shadow {
-  box-shadow: rgba($orange-dark, .50) 0px 5px 15px;
+  box-shadow: 0 0 10px black;
 }
 
 .headerList {

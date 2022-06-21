@@ -8,6 +8,7 @@ import json from '@rollup/plugin-json';
 import postcss from 'rollup-plugin-postcss';
 import replace from '@rollup/plugin-replace';
 import image from '@rollup/plugin-image';
+import copy from 'rollup-plugin-copy';
 
 export default {
   input: 'src/index.jsx',
@@ -40,6 +41,11 @@ export default {
     replace({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
       preventAssignment: true,
+    }),
+    copy({
+      targets: [
+        { src: 'src/index.html', dest: 'dist' }
+      ]
     }),
     process.argv.includes('--watch') &&
       serve({
