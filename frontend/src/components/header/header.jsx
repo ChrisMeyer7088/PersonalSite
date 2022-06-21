@@ -45,7 +45,7 @@ const HeaderList = () => {
         <li><a href="/#projects">Projects</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ol>
-      <a href="/resume" className={styles.resume}>Resume</a>
+      <a href="/assets/resume.pdf" className={styles.resume}>Resume</a>
     </div>
   );
 };
