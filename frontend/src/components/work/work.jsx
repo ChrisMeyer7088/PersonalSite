@@ -63,7 +63,7 @@ export const Work = ({isMobile}) => {
       ],
     }
   ]);
-  const [selectedWork, setSelectedWork] = useState('Applied Medical')
+  const [selectedWork, setSelectedWork] = useState('2U')
 
   return (
     <Fade>
