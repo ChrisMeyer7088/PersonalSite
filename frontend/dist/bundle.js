@@ -9805,8 +9805,8 @@ const About = () => {
           className: styles$6.aboutInfo,
           children: ["I am a full stack software engineer that specializes in building applications for the web. I am currently working at", /*#__PURE__*/jsxRuntime.exports.jsx("span", {
             className: styles$6.highlight,
-            children: " Applied Medical"
-          }), " building out innovative solutions for a learning management system."]
+            children: " 2U"
+          }), " building out web application tools for university students and faculty."]
         }), /*#__PURE__*/jsxRuntime.exports.jsx("div", {
           className: styles$6.aboutBtn,
           children: /*#__PURE__*/jsxRuntime.exports.jsx("a", {
