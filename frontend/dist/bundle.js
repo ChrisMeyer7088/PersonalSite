@@ -9859,7 +9859,7 @@ const Work = ({
     },
     bullets: ['Developed program in VBA that automated time-consuming calculations for a conduit schedule', 'Assisted in creating a SCADA software package for a water treatment plant using Ignition', 'Created program for auto importing and formating AutoCAD data with excel']
   }]);
-  const [selectedWork, setSelectedWork] = react.exports.useState('Applied Medical');
+  const [selectedWork, setSelectedWork] = react.exports.useState('2U');
   return /*#__PURE__*/jsxRuntime.exports.jsx(Fade, {
     children: /*#__PURE__*/jsxRuntime.exports.jsxs("div", {
       className: styles$4.workContainer,
