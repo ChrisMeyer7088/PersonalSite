@@ -12,7 +12,7 @@ export const About = () => {
         <div className={styles.aboutContent}>
           <div className={styles.aboutInfo}>
             I am a full stack software engineer that specializes in building applications for the web. I am currently working at
-            <span className={styles.highlight}> Applied Medical</span> building out innovative solutions for a learning management system.
+            <span className={styles.highlight}> 2U</span> building out web application tools for university students and faculty.
           </div>
           <div className={styles.aboutBtn}>
             <a href="mailto:chrismeyer175@gmail.com?subject=Saying%20Hello!">Say Hello</a>
