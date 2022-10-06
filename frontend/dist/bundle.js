@@ -9681,7 +9681,7 @@ const HeaderList = () => {
         })
       })]
     }), /*#__PURE__*/jsxRuntime.exports.jsx("a", {
-      href: "/assets/resume.pdf",
+      href: "/assets/Chris-Meyer-Resume.pdf",
       className: styles$7.resume,
       children: "Resume"
     })]
